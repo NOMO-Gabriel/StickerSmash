@@ -1,50 +1,94 @@
-# Welcome to your Expo app 👋
+# StickerSmash
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<img src="assets/adaptive-icon.png" width="100" alt="StickerSmash Logo" />
 
-## Get started
+## À propos du projet
 
-1. Install dependencies
+StickerSmash est une application mobile React Native qui permet aux utilisateurs de créer des compositions d'images amusantes en ajoutant des autocollants à leurs photos. Ce projet a été développé en suivant le [tutoriel officiel d'Expo](https://docs.expo.dev/tutorial/introduction/).
 
+⚠️ **Note:** Je ne suis pas l'auteur original de cette application. Ce projet est une implémentation du tutoriel StickerSmash fourni par Expo.
+
+## Fonctionnalités
+
+- Sélection d'images depuis la galerie de l'appareil
+- Ajout d'autocollants prédéfinis aux images
+- Positionnement et redimensionnement des autocollants
+- Enregistrement des créations dans la galerie
+
+## Captures d'écran
+
+<!-- Si vous avez des captures d'écran, ajoutez-les ici -->
+
+## Prérequis
+
+- Node.js (version 14 ou supérieure)
+- npm ou yarn
+- Expo CLI
+- [Expo Go](https://expo.dev/client) sur votre appareil mobile (pour le développement)
+
+## Installation
+
+1. Clonez ce dépôt :
+   ```bash
+   git clone https://github.com/NOMO-Gabriel/StickerSmash.git
+   cd StickerSmash
+   ```
+
+2. Installez les dépendances :
    ```bash
    npm install
+   # ou
+   yarn install
    ```
 
-2. Start the app
+## Lancement du projet
 
-   ```bash
-    npx expo start
-   ```
+### Mode développement
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Pour lancer l'application en mode développement :
 
 ```bash
-npm run reset-project
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Scannez le code QR avec l'application Expo Go sur votre appareil mobile.
 
-## Learn more
+### Création d'un APK (Android)
 
-To learn more about developing your project with Expo, look at the following resources:
+Pour générer un fichier APK :
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+eas build -p android --profile preview
+```
 
-## Join the community
+Cette commande va générer un APK dans le cloud d'Expo et vous fournira un lien pour le télécharger une fois prêt.
 
-Join our community of developers creating universal apps.
+## Structure du projet
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+StickerSmash/
+├── assets/             # Images, icônes et ressources
+├── components/         # Composants React
+├── App.js              # Point d'entrée de l'application
+├── app.json           # Configuration Expo
+├── package.json       # Dépendances
+└── README.md          # Ce fichier
+```
+
+## Technologies utilisées
+
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [Expo Image Picker](https://docs.expo.dev/versions/latest/sdk/imagepicker/)
+- [Expo Media Library](https://docs.expo.dev/versions/latest/sdk/media-library/)
+- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/)
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
+
+## Crédits
+
+- Tutoriel original : [Create your first Expo app (StickerSmash)](https://docs.expo.dev/tutorial/introduction/)
+- Développé par : [NOMO-Gabriel](https://github.com/NOMO-Gabriel)
+
+## Licence
+
+Ce projet est distribué sous la licence MIT. Voir le fichier `LICENSE` pour plus d'informations.

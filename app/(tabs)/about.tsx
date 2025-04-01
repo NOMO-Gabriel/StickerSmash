@@ -1,16 +1,14 @@
-import { View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { Link, Stack } from 'expo-router';
 
-export default function NotFoundScreen() {
+export default function AboutScreen() {
   return (
-    <>
-      <Stack.Screen options={{ title: 'Oops! Not Found' }} />
-      <View style={styles.container}>
-        <Link href="/" style={styles.button}>
+    <View style={styles.container}>
+      <Text style={styles.text}>About screen</Text>
+      <Link href="/" style={styles.button}>
           Go back to Home screen!
         </Link>
-      </View>
-    </>
+    </View>
   );
 }
 
@@ -20,6 +18,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#25292e',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  text: {
+    color: '#fff',
   },
 
   button: {
